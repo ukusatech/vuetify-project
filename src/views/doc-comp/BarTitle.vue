@@ -7,7 +7,7 @@
       shrink-on-scroll
       prominent
       src="https://picsum.photos/1920/1080?random"
-     
+      fade-img-on-scroll
       scroll-target="#scrolling-techniques-3"
     >
       <template v-slot:img="{ props }">
@@ -17,8 +17,9 @@
         ></v-img>
       </template>
 
+      <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-      <v-app-bar-title>Ukusa.Tech</v-app-bar-title>
+      <v-app-bar-title>Title</v-app-bar-title>
 
       <v-spacer></v-spacer>
 
@@ -26,14 +27,19 @@
         <v-icon>mdi-magnify</v-icon>
       </v-btn>
 
+      <v-btn icon>
+        <v-icon>mdi-heart</v-icon>
+      </v-btn>
+
+      <v-btn icon>
+        <v-icon>mdi-dots-vertical</v-icon>
+      </v-btn>
 
       <template v-slot:extension>
         <v-tabs align-with-title>
-          <v-tab>Início</v-tab>
-          <v-tab>Sobre</v-tab>
-          <v-tab>GitHub</v-tab>
-          <v-tab>Vídeos</v-tab>
-          <v-tab>Contato</v-tab>
+          <v-tab>Tab 1</v-tab>
+          <v-tab>Tab 2</v-tab>
+          <v-tab>Tab 3</v-tab>
         </v-tabs>
       </template>
     </v-app-bar>

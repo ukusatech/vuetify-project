@@ -2,23 +2,22 @@
   <v-card class="overflow-hidden">
     <v-app-bar
       absolute
-      color="#6A76AB"
+      color="#fcb69f"
       dark
       shrink-on-scroll
-      prominent
       src="https://picsum.photos/1920/1080?random"
-     
-      scroll-target="#scrolling-techniques-3"
+      scroll-target="#scrolling-techniques-2"
     >
       <template v-slot:img="{ props }">
         <v-img
           v-bind="props"
-          gradient="to top right, rgba(100,115,201,.7), rgba(25,32,72,.7)"
+          gradient="to top right, rgba(19,84,122,.5), rgba(128,208,199,.8)"
         ></v-img>
       </template>
 
+      <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-      <v-app-bar-title>Ukusa.Tech</v-app-bar-title>
+      <v-app-bar-title>Title</v-app-bar-title>
 
       <v-spacer></v-spacer>
 
@@ -26,19 +25,16 @@
         <v-icon>mdi-magnify</v-icon>
       </v-btn>
 
+      <v-btn icon>
+        <v-icon>mdi-heart</v-icon>
+      </v-btn>
 
-      <template v-slot:extension>
-        <v-tabs align-with-title>
-          <v-tab>Início</v-tab>
-          <v-tab>Sobre</v-tab>
-          <v-tab>GitHub</v-tab>
-          <v-tab>Vídeos</v-tab>
-          <v-tab>Contato</v-tab>
-        </v-tabs>
-      </template>
+      <v-btn icon>
+        <v-icon>mdi-dots-vertical</v-icon>
+      </v-btn>
     </v-app-bar>
     <v-sheet
-      id="scrolling-techniques-3"
+      id="scrolling-techniques-2"
       class="overflow-y-auto"
       max-height="600"
     >

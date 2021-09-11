@@ -32,7 +32,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/testes-de-componentes/Card.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/doc-comp/Card.vue')
   },
   {
     path: '/form',
@@ -40,7 +40,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/testes-de-componentes/Form.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/doc-comp/Form.vue')
   },
   {
     path: '/switch-dark',
@@ -56,7 +56,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/testes-de-componentes/CarouselText.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/doc-comp/CarouselText.vue')
   },
   {
     path: '/carousel-photos',
@@ -64,10 +64,36 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/testes-de-componentes/CarouselPhotos.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/doc-comp/CarouselPhotos.vue')
+  },
+  {
+    path: '/grid',
+    name: 'Grid',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/doc-comp/Grid.vue')
+  },
+  {
+    path: '/bar-title',
+    name: 'Bar Titles',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/doc-comp/BarTitle.vue')
+  },
+  {
+    path: '/bar-img',
+    name: 'Bar with Img',
+    component: () => import(/* webpackChunkName: "about" */ '../views/doc-comp/BarDownWithImage.vue')
+  },
+  {
+    path: '/HomeTeste',
+    name: 'Home Teste',
+    component: () => import('../views/testes-comp/BarImgTitles.vue')
   }
 
-
+  
 
   
 ]
