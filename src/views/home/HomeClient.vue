@@ -9,6 +9,7 @@
       src="https://picsum.photos/1920/1080?random"
      
       scroll-target="#scrolling-techniques-3"
+      height="100"
     >
       <template v-slot:img="{ props }">
         <v-img
@@ -30,10 +31,31 @@
       <template v-slot:extension>
         <v-tabs align-with-title>
           <v-tab>Início</v-tab>
-          <v-tab>Sobre</v-tab>
-          <v-tab>GitHub</v-tab>
-          <v-tab>Vídeos</v-tab>
-          <v-tab>Contato</v-tab>
+          <v-tab>Sobre
+
+           <v-icon>mdi-information-variant</v-icon>
+          </v-tab>
+          <v-tab>GitHub
+
+             <v-icon>mdi-github</v-icon>
+          </v-tab>
+          <v-tab>Vídeos
+           
+ <v-icon>mdi-video-vintage</v-icon>
+          </v-tab>
+
+
+          <v-tab href="#tab-3">
+            Contato
+            <v-icon>mdi-account-box</v-icon>
+            <v-tab-item
+        v-for="i in 3"
+        :key="i"
+        :value="`tab-${i}`"
+      >
+       <contact/>
+      </v-tab-item>
+            </v-tab>
         </v-tabs>
       </template>
     </v-app-bar>
@@ -46,3 +68,11 @@
     </v-sheet>
   </v-card>
 </template>
+<script>
+import Contact from '../../components/Home/Contact.vue'
+export default {
+  components: {
+      Contact,
+    },
+}
+</script>

@@ -91,7 +91,13 @@ const routes = [
     path: '/HomeTeste',
     name: 'Home Teste',
     component: () => import('../views/testes-comp/BarImgTitles.vue')
+  },
+  {
+    path: '/vtabs',
+    name: 'VTabs',
+    component: () => import('../views/doc-comp/VTabs.vue')
   }
+
 
   
 
