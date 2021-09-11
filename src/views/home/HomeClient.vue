@@ -7,7 +7,6 @@
       shrink-on-scroll
       prominent
       src="https://picsum.photos/1920/1080?random"
-     
       scroll-target="#scrolling-techniques-3"
       height="100"
     >
@@ -18,7 +17,6 @@
         ></v-img>
       </template>
 
-
       <v-app-bar-title>Ukusa.Tech</v-app-bar-title>
 
       <v-spacer></v-spacer>
@@ -27,35 +25,36 @@
         <v-icon>mdi-magnify</v-icon>
       </v-btn>
 
-
       <template v-slot:extension>
         <v-tabs align-with-title>
-          <v-tab>Início</v-tab>
-          <v-tab>Sobre
-
-           <v-icon>mdi-information-variant</v-icon>
+          <v-tab href="#tab-1">Início</v-tab>
+          <v-tab href="#tab-2">
+            Sobre
+            <v-icon>mdi-information-variant</v-icon>
           </v-tab>
-          <v-tab>GitHub
+             <v-tab-item :value="`tab-2`">
+            <about />
+          </v-tab-item>
+          <v-tab href="#tab-3"
+            >GitHub
 
-             <v-icon>mdi-github</v-icon>
+            <v-icon>mdi-github</v-icon>
           </v-tab>
-          <v-tab>Vídeos
-           
- <v-icon>mdi-video-vintage</v-icon>
+
+          <v-tab href="#tab-4"
+            >Vídeos
+
+            <v-icon>mdi-video-vintage</v-icon>
           </v-tab>
 
-
-          <v-tab href="#tab-3">
+          <v-tab href="#tab-5">
             Contato
             <v-icon>mdi-account-box</v-icon>
-            <v-tab-item
-        v-for="i in 3"
-        :key="i"
-        :value="`tab-${i}`"
-      >
-       <contact/>
-      </v-tab-item>
-            </v-tab>
+          </v-tab>
+          <v-tab-item :value="`tab-5`">
+            <contact />
+          </v-tab-item>
+       
         </v-tabs>
       </template>
     </v-app-bar>
@@ -64,15 +63,17 @@
       class="overflow-y-auto"
       max-height="600"
     >
-      <v-container style="height: 1000px;"></v-container>
+      <v-container style="height: 1000px"></v-container>
     </v-sheet>
   </v-card>
 </template>
 <script>
-import Contact from '../../components/Home/Contact.vue'
+import Contact from "../../components/Home/Contact.vue";
+import About from "../../components/Home/About.vue";
 export default {
   components: {
-      Contact,
-    },
-}
+    Contact,
+    About,
+  },
+};
 </script>
