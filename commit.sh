@@ -4,7 +4,7 @@
 set -e
 
 git add .
-git commit -m 'script commit master'
+echo "-m: "
+read message
+git commit -m message
 git push origin master
-
-cd -
