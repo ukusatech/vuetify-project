@@ -3,7 +3,7 @@
 # abort on errors
 set -e
 
-git add .
+git add *
 #PRA ADIANTAR O LADO COMMITA SEM MENSAGEM CAPTURADA
 #echo "TRACK ALL TO MASTER >> WRITE YOUR MESSAGE:"
 #read message
