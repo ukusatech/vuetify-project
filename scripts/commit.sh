@@ -4,7 +4,9 @@
 set -e
 
 git add .
-echo "TRACK ALL TO MASTER >> WRITE YOUR MESSAGE:"
-read message
-git commit -m message
+#PRA ADIANTAR O LADO COMMITA SEM MENSAGEM CAPTURADA
+#echo "TRACK ALL TO MASTER >> WRITE YOUR MESSAGE:"
+#read message
+#git commit -m message
+git commit -m "AUTO COMMIT"
 git push origin master
