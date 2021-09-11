@@ -4,9 +4,7 @@
 set -e
 
 git add .
-echo "TRACK ALL >> WRITE YOUR MESSAGE:"
+echo "TRACK ALL TO MASTER >> WRITE YOUR MESSAGE:"
 read message
 git commit -m message
-read branch
-echo "PUSH TO :" + branch
-git push origin branch
+git push origin master
