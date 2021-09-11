@@ -7,8 +7,8 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "deploy": "sh deploy.sh",
-    "commit": "sh commit.sh"
+    "deploy": "cd scripts && sh deploy.sh",
+    "commit": "cd scripts && sh commit.sh"
   },
   "dependencies": {
     "core-js": "^3.6.5",
