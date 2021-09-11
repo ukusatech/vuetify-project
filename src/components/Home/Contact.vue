@@ -38,7 +38,30 @@
       <v-btn color="error" class="mr-4" @click="reset"> Reset Form </v-btn>
 
       <v-btn color="warning" @click="resetValidation"> Reset Validation </v-btn>
+    
+       <div>
+           <a
+            href="https://wa.me/5571993141399"
+            target="_blank"
+          ><v-icon>mdi-whatsapp</v-icon></a>
+           
+         <a
+            href="https://www.instagram.com/ukusa.tech/"
+            target="_blank"
+          ><v-icon>mdi-linkedin</v-icon></a>
+        <a
+            href="https://github.com/ukusatech/"
+            target="_blank"
+          > <v-icon>mdi-github</v-icon></a>
+        <a
+            href="https://www.instagram.com/ukusa.tech/"
+            target="_blank"
+          > <v-icon>mdi-instagram</v-icon></a>
+    </div>
+    
     </v-form>
+
+ 
 
 </template>
 
@@ -74,3 +97,9 @@ export default {
   },
 };
 </script>
+
+<style>
+ a{
+     text-decoration:none;
+ }
+</style>

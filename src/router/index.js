@@ -96,6 +96,11 @@ const routes = [
     path: '/vtabs',
     name: 'VTabs',
     component: () => import('../views/doc-comp/VTabs.vue')
+  },
+  {
+    path: '/sendemail',
+    name: 'Send Email',
+    component: () => import('../views/doc-comp/SendEmail.vue')
   }
 
 
