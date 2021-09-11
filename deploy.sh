@@ -15,11 +15,11 @@ cd dist
 git init
 git add -A
 git commit -m 'deploy'
-
+git push -u origin master
 # if you are deploying to https://ukusatech.github.io
-# git push -f git@github.com:ukusatech/ukusatech.github.io.git main
+# git push -f git@github.com:ukusatech/ukusatech.github.io.git master
 
 # if you are deploying to https://ukusatech.github.io/vuetify-project
-git push -f git@github.com:ukusatech/vuetify-project.git main:gh-pages
+git push -f git@github.com:ukusatech/vuetify-project.git master:gh-pages
 
 cd -
