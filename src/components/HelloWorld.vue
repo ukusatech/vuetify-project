@@ -14,6 +14,11 @@
             <router-link to="/about">
 <button>About Creator</button>
 </router-link>
+           <router-link to="/login">
+<button>Login</button>
+</router-link>           <router-link to="/form">
+<button>form</button>
+</router-link>
         <h1 class="display-2 font-weight-bold mb-3">
           Welcome to Vuetify
         </h1>
