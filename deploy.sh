@@ -17,7 +17,7 @@ ls
 git init
 git add -A
 git commit -m 'deploy'
-# git push -u origin master
+#git push origin master
 # if you are deploying to https://ukusatech.github.io
 # git push -f git@github.com:ukusatech/ukusatech.github.io.git master
 
