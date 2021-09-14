@@ -66,10 +66,12 @@
       <v-btn color="warning" @click="resetValidation"> Reset Validation </v-btn> -->
     
        <div>
-           <a
-            href="/sendemail"
-            target="_blank"
-          ><v-icon>mdi-email</v-icon></a>
+          
+
+          
+           <router-link to="/sendemail">
+<v-icon>mdi-email</v-icon>
+</router-link> 
            <a
             href="https://wa.me/5571993141399"
             target="_blank"
