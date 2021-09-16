@@ -87,7 +87,7 @@ init("user_NS6sUcl9SiBRXFDIgh0ax");
 
 export default {
   data: () => ({
-    formContato: false,
+    formContato: true,
     valid: true,
     name: "",
     from_name: "",
