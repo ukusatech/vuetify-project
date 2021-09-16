@@ -8,7 +8,7 @@
       prominent
       src="https://picsum.photos/1920/1080?random"
       scroll-target="#scrolling-techniques-3"
-      height="100"
+      height="50"
     >
       <template v-slot:img="{ props }">
         <v-img
@@ -60,8 +60,8 @@
     </v-app-bar>
     <v-sheet
       id="scrolling-techniques-3"
-      class="overflow-y-auto"
-      max-height="900"
+     
+      max-height="850"
     >
       <v-container style="height: 1000px"></v-container>
     </v-sheet>

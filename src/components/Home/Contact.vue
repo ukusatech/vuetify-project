@@ -1,7 +1,6 @@
- start with the template:
-
 <template>
     <div class="container">
+        <v-flex v-if="formContato" persistent>
         <form @submit.prevent="sendEmail">
           <label>Name</label>
           <input 
@@ -27,6 +26,13 @@
           
           <input type="submit" value="Send">
         </form>
+        </v-flex>
+         <v-flex v-if="!formContato" persistent>
+             <v-img :contain="true" :src="require(
+        '@/assets/img/icons/check.png')" height="360px">
+      </v-img>
+       <h1>E-mail enviado com sucesso!</h1>
+        </v-flex>
     </div>
 </template>
 <style scoped>
@@ -39,11 +45,16 @@
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
-  width: 50%;
+  width: 100%;
 }
 
 label {
   float: left;
+  color: #5D5F91;
+}
+h1 {
+  float: center;
+  color: #5D5F91;
 }
 
 input[type=text], [type=email], textarea {
@@ -76,6 +87,7 @@ init("user_NS6sUcl9SiBRXFDIgh0ax");
 
 export default {
   data: () => ({
+    formContato: false,
     valid: true,
     name: "",
     from_name: "",
@@ -94,20 +106,34 @@ export default {
     items: ["Item 1", "Item 2", "Item 3", "Item 4"],
     checkbox: false,
   }),
-
+  // data() {
+  //   // declaração de variáveis
+  //   return {
+  //     formContato: true,
+  //   valid: true,
+  //   name: "",
+  //   from_name: "",
+  //   message: "",
+  //   reply_to:"",
+  //  };
+  // },
   methods: {
-      sendEmail: (e) => {
-      emailjs.sendForm('service_ra7epj1', 'template_z0kedl8', e.target, 'user_NS6sUcl9SiBRXFDIgh0ax')
+    sendEmail(e){
+       emailjs.sendForm('service_ra7epj1', 'template_z0kedl8', e.target, 'user_NS6sUcl9SiBRXFDIgh0ax')
         .then((result) => {
-          
+
             console.log('SUCCESS!', result.status, result.text);
-            alert('EMAIL ENVIADO COM SUCESSO');
+            // alert('EMAIL ENVIADO COM SUCESSO ');
+            this.limpaForm();
+            this.formContato = false;
+
+           
            
         }, (error) => {
             console.log('FAILED...', error);
         });
         console.log("SAIU")
-        
+        this.reply_to = "";
     },
      limpaForm(){
       console.log= "entrou no limpa form";
