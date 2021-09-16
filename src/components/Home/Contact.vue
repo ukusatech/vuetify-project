@@ -1,102 +1,75 @@
+ start with the template:
+
 <template>
-  
-    <v-form ref="form" v-model="valid" lazy-validation>
-   
-      <v-text-field
-        v-model="from_name"
-        :counter="10"
-        :rules="nameRules"
-        label="NOME EMAIL"
-        
-      ></v-text-field>
-   
-       <v-text-field
-        v-model="message"
-        :counter="100"
-        :rules="nameRules"
-        label="CORPO EMAIL"
-        
-      ></v-text-field>
-      <v-text-field
-        v-model="reply_to"
-        :counter="100"
-        :rules="nameRules"
-        label="REPLY EMAIL"
-        
-      ></v-text-field>
-      <!-- <v-text-field
-        v-model="name"
-        :counter="10"
-        :rules="nameRules"
-        label="Name"
-        required
-      ></v-text-field> -->
-
-      <!-- <v-text-field
-        v-model="email"
-        :rules="emailRules"
-        label="E-mail"
-        required
-      ></v-text-field> -->
-<!-- 
-      <v-select
-        v-model="select"
-        :items="items"
-        :rules="[(v) => !!v || 'Item is required']"
-        label="Item"
-        required
-      ></v-select>
-
-      <v-checkbox
-        v-model="checkbox"
-        :rules="[(v) => !!v || 'You must agree to continue!']"
-        label="Do you agree?"
-        required
-      ></v-checkbox> -->
-
-      <v-btn :disabled="!valid" color="success" class="mr-4" @click="sendEmail" @submit.prevent="sendEmail">
-        ENVIAR
-      </v-btn>
-      <!-- <v-btn :disabled="!valid" color="success" class="mr-4" @click="validate">
-        Validate
-      </v-btn>
-
-      <v-btn color="error" class="mr-4" @click="reset"> Reset Form </v-btn>
-
-      <v-btn color="warning" @click="resetValidation"> Reset Validation </v-btn> -->
-    
-       <div>
+    <div class="container">
+        <form @submit.prevent="sendEmail">
+          <label>Name</label>
+          <input 
+            type="text" 
+            v-model="from_name"
+            name="from_name"
+            placeholder="Your Name"
+          >
+          <label>Email</label>
+          <input 
+            type="email" 
+            v-model="reply_to"
+            name="reply_to"
+            placeholder="Your Email"
+            >
+          <label>Message</label>
+          <textarea 
+            name="message"
+            v-model="message"
+            cols="30" rows="5"
+            placeholder="Message">
+          </textarea>
           
-
-          
-           <router-link to="/sendemail">
-<v-icon>mdi-email</v-icon>
-</router-link> 
-           <a
-            href="https://wa.me/5571993141399"
-            target="_blank"
-          ><v-icon>mdi-whatsapp</v-icon></a>
-           
-         <a
-            href="https://www.instagram.com/ukusa.tech/"
-            target="_blank"
-          ><v-icon>mdi-linkedin</v-icon></a>
-        <a
-            href="https://github.com/ukusatech/"
-            target="_blank"
-          > <v-icon>mdi-github</v-icon></a>
-        <a
-            href="https://www.instagram.com/ukusa.tech/"
-            target="_blank"
-          > <v-icon>mdi-instagram</v-icon></a>
+          <input type="submit" value="Send">
+        </form>
     </div>
-    
-    </v-form>
-
- 
-
 </template>
+<style scoped>
+* {box-sizing: border-box;}
 
+.container {
+  display: block;
+  margin:auto;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 50%;
+}
+
+label {
+  float: left;
+}
+
+input[type=text], [type=email], textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+</style>
 <script>
 import  emailjs, { init } from 'emailjs-com';
 init("user_NS6sUcl9SiBRXFDIgh0ax");
@@ -124,14 +97,23 @@ export default {
 
   methods: {
       sendEmail: (e) => {
-        console.log("entrou na bagaça")
       emailjs.sendForm('service_ra7epj1', 'template_z0kedl8', e.target, 'user_NS6sUcl9SiBRXFDIgh0ax')
         .then((result) => {
+          
             console.log('SUCCESS!', result.status, result.text);
+            alert('EMAIL ENVIADO COM SUCESSO');
+           
         }, (error) => {
             console.log('FAILED...', error);
         });
         console.log("SAIU")
+        
+    },
+     limpaForm(){
+      console.log= "entrou no limpa form";
+      this.from_name = "";
+      this.reply_to = "";
+      this.message= "";
     },
     validate() {
       this.$refs.form.validate();

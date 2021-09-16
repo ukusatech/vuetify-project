@@ -23,6 +23,8 @@ init("user_NS6sUcl9SiBRXFDIgh0ax");
 export default {
   methods: {
     sendEmail: (e) => {
+      console.log('E: ',e);
+      console.log('TARGET: ',e.target);
       emailjs.sendForm('service_ra7epj1', 'template_z0kedl8', e.target, 'user_NS6sUcl9SiBRXFDIgh0ax')
         .then((result) => {
             console.log('SUCCESS!', result.status, result.text);

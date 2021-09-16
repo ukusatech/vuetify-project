@@ -61,7 +61,7 @@
     <v-sheet
       id="scrolling-techniques-3"
       class="overflow-y-auto"
-      max-height="600"
+      max-height="900"
     >
       <v-container style="height: 1000px"></v-container>
     </v-sheet>
