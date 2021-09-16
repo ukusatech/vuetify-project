@@ -119,6 +119,14 @@ export default {
   // },
   methods: {
     sendEmail(e){
+      if(
+        this.from_name ===  null || this.from_name ===  "" ||
+    this.message ===  null || this.message ===  "" ||
+    this.reply_to ===  null || this.reply_to ===  "" ){
+      alert('CAMPOS NULOS OU VAZIOS');
+      return null;
+    }
+
        emailjs.sendForm('service_ra7epj1', 'template_z0kedl8', e.target, 'user_NS6sUcl9SiBRXFDIgh0ax')
         .then((result) => {
 
