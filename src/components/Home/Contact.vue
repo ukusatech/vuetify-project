@@ -2,26 +2,33 @@
     <div class="container">
         <v-flex v-if="formContato" persistent>
         <form @submit.prevent="sendEmail">
-          <label>Name</label>
-          <input 
+        
+           <input 
             type="text" 
             v-model="from_name"
             name="from_name"
-            placeholder="Your Name"
+            placeholder="Nome"
           >
-          <label>Email</label>
+          <!-- <v-text-field
+        v-model="from_name"
+        :counter="10"
+        :rules="nameRules"
+        label="Nome"
+        required
+      ></v-text-field> -->
+
           <input 
             type="email" 
             v-model="reply_to"
             name="reply_to"
-            placeholder="Your Email"
+            placeholder="E-mail"
             >
-          <label>Message</label>
+    
           <textarea 
             name="message"
             v-model="message"
             cols="30" rows="5"
-            placeholder="Message">
+            placeholder="Mensagem">
           </textarea>
           
           <input type="submit" value="Send">
@@ -106,17 +113,7 @@ export default {
     items: ["Item 1", "Item 2", "Item 3", "Item 4"],
     checkbox: false,
   }),
-  // data() {
-  //   // declaração de variáveis
-  //   return {
-  //     formContato: true,
-  //   valid: true,
-  //   name: "",
-  //   from_name: "",
-  //   message: "",
-  //   reply_to:"",
-  //  };
-  // },
+
   methods: {
     sendEmail(e){
       if(

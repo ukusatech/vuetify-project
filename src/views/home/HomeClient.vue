@@ -28,6 +28,9 @@
       <template v-slot:extension>
         <v-tabs align-with-title>
           <v-tab href="#tab-1">Início</v-tab>
+           <v-tab-item :value="`tab-1`">
+            <inicio />
+          </v-tab-item>
           <v-tab href="#tab-2">
             Sobre
             <v-icon>mdi-information-variant</v-icon>
@@ -46,6 +49,9 @@
 
             <v-icon>mdi-video-vintage</v-icon>
           </v-tab>
+                 <v-tab-item :value="`tab-4`">
+            <videos />
+          </v-tab-item>
 
           <v-tab href="#tab-5">
             Contato
@@ -70,10 +76,14 @@
 <script>
 import Contact from "../../components/Home/Contact.vue";
 import About from "../../components/Home/About.vue";
+import Videos from "../../components/Home/Videos.vue";
+import Inicio from "../../components/Home/Inicio.vue";
 export default {
   components: {
     Contact,
     About,
+    Videos,
+    Inicio
   },
 };
 </script>
