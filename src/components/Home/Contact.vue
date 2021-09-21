@@ -23,7 +23,7 @@
             name="reply_to"
             placeholder="E-mail"
             >
-    
+          <!-- <label>Message</label> -->
           <textarea 
             name="message"
             v-model="message"

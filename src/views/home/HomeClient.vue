@@ -38,7 +38,7 @@
              <v-tab-item :value="`tab-2`">
             <about />
           </v-tab-item>
-          <v-tab href="#tab-3"
+          <!-- <v-tab href="#tab-3"
             >GitHub
 
             <v-icon>mdi-github</v-icon>
@@ -48,7 +48,7 @@
             >Vídeos
 
             <v-icon>mdi-video-vintage</v-icon>
-          </v-tab>
+          </v-tab> -->
                  <v-tab-item :value="`tab-4`">
             <videos />
           </v-tab-item>
