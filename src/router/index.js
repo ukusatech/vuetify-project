@@ -102,6 +102,12 @@ const routes = [
     name: 'Send Email',
     component: () => import('../views/doc-comp/SendEmail.vue')
   }
+  ,
+  {
+    path: '/3d',
+    name: '3D COverflow',
+    component: () => import('../views/doc-comp/3DCoverflow.vue')
+  }
 
 
   

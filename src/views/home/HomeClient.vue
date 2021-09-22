@@ -6,7 +6,7 @@
       dark
       shrink-on-scroll
       prominent
-      src="https://picsum.photos/1920/1080?random"
+      src="../../assets/img/zulus/gene.jpg"
       scroll-target="#scrolling-techniques-3"
       height="50"
     >
@@ -17,7 +17,7 @@
         ></v-img>
       </template>
 
-      <v-app-bar-title>Ukusa.Tech</v-app-bar-title>
+      <v-app-bar-title>Ukusa.tech</v-app-bar-title>
 
       <v-spacer></v-spacer>
 
@@ -74,15 +74,16 @@
   </v-card>
 </template>
 <script>
+// import IMG_ZULU_1 from "../../assets/img/zulus/gene.jpg"
 import Contact from "../../components/Home/Contact.vue";
 import About from "../../components/Home/About.vue";
-import Videos from "../../components/Home/Videos.vue";
+// import Videos from "../../components/Home/Videos.vue";
 import Inicio from "../../components/Home/Inicio.vue";
 export default {
   components: {
     Contact,
     About,
-    Videos,
+    // Videos,
     Inicio
   },
 };
