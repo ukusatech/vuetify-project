@@ -25,8 +25,20 @@ export default {
 };
 </script>
 <style scoped>
-body{
-    background-color: black;
+@font-face {
+  font-family: "Rounded Elegance";
+  src: local("Rounded Elegance"),
+   url(./fonts/Rounded_Elegance.ttf) format("truetype");
+}
+@font-face {
+  font-family: "NoirPro-Bold";
+  src: local("NoirPro-Bold"),
+   url(./fonts/noir-pro-bold.ttf) format("truetype");
+}
+
+html, body{
+   margin: 0;
+   padding: 0;
 }
 .footer {
 height: 2em;

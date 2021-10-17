@@ -1,6 +1,7 @@
 <template>
   <div class="about">
-    <h1>Sobre a Ukusa Tech</h1>
+    <h1>Sobre a <p class="fonteUkusa">Ukusa</p><p class="fonteTech">.tech</p></h1>
+    
     <h5>
       A Ukusa Tech, fundada por Gustavo Ferreira, é uma ideia de blog sobre
       tecnologias, atuais e antigas, legadas ou hype, tudo que houver de
@@ -33,12 +34,22 @@
   </div>
 </template>
 <style>
+
+
+.fonteUkusa{  font-family: "NoirPro-Bold", Helvetica, Arial; font-size: 50px; margin: -30px}
+.fonteTech{ font-family: "Rounded Elegance", Helvetica, Arial;  font-size: 50px; margin: -35px;}
+
+.v-application p {
+    margin-bottom: 0px;
+}
 .about {
-  color: rgba(34, 33, 61, 0.767);
-  padding: 150px;
+  font-family: "Rounded Elegance", Helvetica, Arial;
+  color: rgba(23, 21, 61, 0.767);
+  padding: 70px;
 }
 h1 {
   text-align: center;
+  font-size: 20px;
 }
 h3 {
   margin: 0px;

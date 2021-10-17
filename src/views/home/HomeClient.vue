@@ -6,18 +6,20 @@
       dark
       shrink-on-scroll
       prominent
-      src="../../assets/img/zulus/gene.jpg"
+      src="../../assets/img/ukusa-design/logo-horizontal.png"
       scroll-target="#scrolling-techniques-3"
       height="50"
     >
       <template v-slot:img="{ props }">
         <v-img
           v-bind="props"
-          gradient="to top right, rgba(100,115,201,.7), rgba(25,32,72,.7)"
+          gradient="to top right, rgb(0,0,0), rgb(25,32,72)"
         ></v-img>
       </template>
 
-      <v-app-bar-title>Ukusa.tech</v-app-bar-title>
+      <!-- <v-app-bar-title>Ukusa.tech</v-app-bar-title> -->
+      <v-app-bar-title><img src="../../assets/img/ukusa-design/logo-vertical-branca.png"/></v-app-bar-title>
+      <img src="../../assets/img/ukusa-design/logo-vertical-branca.png" height="100" />
 
       <v-spacer></v-spacer>
 
@@ -75,6 +77,7 @@
 </template>
 <script>
 // import IMG_ZULU_1 from "../../assets/img/zulus/gene.jpg"
+// import LOGO_HORIZONTAL_BRANCO from "../../assets/img/ukusa-design/logo-vertical-branca.png";
 import Contact from "../../components/Home/Contact.vue";
 import About from "../../components/Home/About.vue";
 // import Videos from "../../components/Home/Videos.vue";

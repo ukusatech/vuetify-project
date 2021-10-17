@@ -1,7 +1,7 @@
 <template>
   <v-carousel height="717" cycle show-arrows-on-hover hide-delimiter-background>
     <div class="inicio">
-      <v-carousel-item
+      <!-- <v-carousel-item
         v-for="(item, i) in items"
         :key="i"
         :src="item.src"
@@ -17,7 +17,7 @@
             </div>
           </v-row>
         </v-sheet>
-      </v-carousel-item>
+      </v-carousel-item> -->
     </div>
   </v-carousel>
 </template>
@@ -41,11 +41,11 @@ export default {
         "rgba(255, 255, 255, 0)",
         "rgba(255, 255, 255, 0)",
         "rgba(255, 255, 255, 0)",
-        "rgba(114, 58, 218, 0.644)",
-        "rgba(114, 58, 218, 0.644)",
-        "rgba(114, 58, 218, 0.644)",
-        "rgba(114, 58, 218, 0.644)",
-        "rgba(114, 58, 218, 0.644)",
+        "rgba(255, 255, 255, 0)",
+        "rgba(255, 255, 255, 0)",
+        "rgba(255, 255, 255, 0)",
+        "rgba(255, 255, 255, 0)",
+        "rgba(255, 255, 255, 0)",
       ],
       slides: ["First", "Second", "Third", "Fourth", "Fifth"],
       items: [
@@ -89,6 +89,6 @@ export default {
 }
 
 .inicio-txt {
-  color: rgba(255, 255, 255, 0);
+  /* color: rgba(255, 255, 255, 0); */
 }
 </style>
